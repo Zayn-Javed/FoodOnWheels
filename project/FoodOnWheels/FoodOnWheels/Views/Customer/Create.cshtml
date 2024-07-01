@@ -1,0 +1,71 @@
+﻿@model FoodOnWheels.Models.Customer
+
+@{
+    ViewData["Title"] = "Create";
+    Layout= "../Shared/CustpmerLayout.cshtml";
+}
+
+
+
+        <form asp-action="Create">
+            <br/>
+            <h3 class= "">Customer</h3>
+            <h4 class= "text-center align-content-center align-self-md-center">Create a new account.</h4>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-floating">
+                
+                <input asp-for="FristName" class="form-control" />
+                <label asp-for="FristName"></label>
+                <span asp-validation-for="FristName" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                
+                <input asp-for="LastName" class="form-control" />
+                <label asp-for="LastName"></label>
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                
+                <input asp-for="PhoneNumber" class="form-control" />
+                <label asp-for="PhoneNumber"></label>
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                
+                <input asp-for="Address" class="form-control" />
+                <label asp-for="Address" ></label>
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                
+                <input asp-for="Eamil" class="form-control" />
+                <label asp-for="Eamil"></label>
+                <span asp-validation-for="Eamil" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+               
+                <input asp-for="UserName" class="form-control" />
+                 <label asp-for="UserName"></label>
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                
+                <input type="password" asp-for="Password" class="form-control" />
+                <label asp-for="Password" ></label>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            
+             <br/>
+            <div class="form-group">
+                <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">sign up</button>
+            </div>
+
+        </form>
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,29 @@
+﻿@{
+	Layout= "_Layout.cshtml";
+}
+<div class=" align-content-md-around">
+	<div class="align-content-md-around border-top">
+		<div class="card login-logout-tab align-content-center" >
+			<div class= "card-header align-content-center">
+				<ul class= "nav nav-tabs card-header-tabs align-content-center">
+					<li class= "nav-item">
+						<a class= "nav-link" href='../Customer/Login'>Sign In</a>
+					</li>
+					<li class= "nav-item align-content-center">
+						<a class= "nav-link" href='../Customer/Create'>Sign up</a>
+					</li>
+				</ul>
+			</div>
+			<div class= "card-content align-content-center"> 
+				<div class="row align-content-center">
+				<div class="col-md-12">
+					@RenderBody()
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+@section Scripts{
+	@RenderSectionAsync("Scripts", required: false)
+}

@@ -1,0 +1,42 @@
+﻿@model IEnumerable<FoodOnWheels.Models.Customer>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Block Customer</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FristName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FristName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+
+
+               <a class="btn btn-danger" role="button"  asp-action="Block" asp-route-id="@item.UserName">Block</a> 
+           </td>
+        </tr>
+}
+    </tbody>
+</table>
+<br/>
+<a class="btn btn-info" role="button"  asp-action="AdminMenu" asp-controller="Home">Move back to Admin Menu</a> 

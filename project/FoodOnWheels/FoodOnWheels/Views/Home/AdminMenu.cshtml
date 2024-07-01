@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewData["Title"] = "AdminMenu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>AdminMenu</h1>
+
+<div>
+
+
+<div  class="card text-white bg-info mb-3 align-content-center align-self-md-center"  >
+  <h5 class="card-header">Featured</h5>
+  <div class="card-body">
+    <h5 class="card-title">Unblock a Customer</h5>
+    <p class="card-text">Unblock the customer which has achieved the points to get the status back to active</p>
+    <a class="btn btn-light" asp-area="" asp-controller="Customer" asp-action="UnblockIndex">Unblock Now</a>
+  </div>
+</div>
+<br/>
+<div class="card text-white bg-danger mb-3 align-content-center align-self-md-center">
+  <h5 class="card-header">Featured</h5>
+  <div class="card-body">
+    <h5 class="card-title">Block a Customer</h5>
+    <p class="card-text">Block the Customer which has violated the Rules</p>
+    <a class="btn btn-light" asp-area="" asp-controller="Customer" asp-action="BlockIndex">Block Now</a>
+  </div>
+</div>
+<br/>
+<div  class="card text-white bg-info mb-3 align-content-center align-self-md-center" >
+  <h5 class="card-header">Featured</h5>
+  <div class="card-body">
+    <h5 class="card-title">Unlock a Rider</h5>
+    <p class="card-text">Unblock the Rider which has achieved the points to get the status back to active</p>
+    <a class="btn btn-light" asp-area="" asp-controller="Rider" asp-action="UnblockIndex">Unblock Now</a>
+  </div>
+</div>
+<br/>
+<div class="card text-white bg-danger mb-3 align-content-center align-self-md-center" >
+  <h5 class="card-header">Featured</h5>
+  <div class="card-body">
+    <h5 class="card-title">Block a Rider</h5>
+    <p class="card-text">Block the Rider which has violated the Rules</p>
+    <a class="btn btn-light" asp-area="" asp-controller="Rider" asp-action="BlockIndex">Block Now</a>
+  </div>
+</div>
+
+
+
+</div>

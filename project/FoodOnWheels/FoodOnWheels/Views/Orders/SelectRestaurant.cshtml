@@ -1,0 +1,42 @@
+﻿@model IEnumerable<FoodOnWheels.Models.Manager>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Select Restaurant to Order Food</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RestaurantName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RestaurantLocation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RestaurantName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RestaurantLocation)
+            </td>
+            <td>
+
+
+               <a class="btn btn-primary" role="button"  asp-action="SelectSubMenu" asp-route-id="@item.UserName">Order Now</a> 
+           </td>
+        </tr>
+}
+    </tbody>
+</table>
+<br/>
+<a class="btn btn-info" role="button"  asp-action="CustomerMenu" asp-controller="Customer"> Back to Customer Menu</a> 

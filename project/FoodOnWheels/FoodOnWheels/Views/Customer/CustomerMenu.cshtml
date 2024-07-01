@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewData["Title"] = "CustomerMenu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Customer Menu</h1>
+ <br/>
+<div>
+
+
+<div class="card text-center text-white bg-success mb-3 ">
+  <div class="card-header">
+    Oredr Food
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Order Food you Want!</h5>
+    <p class="card-text">Order the Food you want from any Restaurant with 24/7 Home Delivery Service</p>
+    <a class="btn btn-light" asp-area="" asp-controller="Orders" asp-action="SelectRestaurant">Order Now</a>
+  </div>
+  <div class="card-footer text-muted">
+      <br/>
+  </div>
+</div>
+
+<div class="card text-center text-white bg-primary mb-3 ">
+  <div class="card-header">
+    Review
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Give Review to Restaurant</h5>
+    <p class="card-text">Give the Reviews to any Restaurant now for better Experience next time</p>
+    <a class="btn btn-light" asp-area="" asp-controller="Review" asp-action="SelectRestaurant">Give Review Now</a>
+  </div>
+  <div class="card-footer text-muted">
+      <br/>
+  </div>
+</div>
+
+
+<div class="card text-center text-white bg-primary mb-3 ">
+  <div class="card-header">
+    Order Status
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Check the Status of your Orders</h5>
+    <p class="card-text">Now you can check the status of order which has not bee deliverd yet</p>
+    <a class="btn btn-light" asp-area="" asp-controller="Orders" asp-action="CheckOrderStatus">Check Now</a>
+  </div>
+  <div class="card-footer text-muted">
+      <br/>
+  </div>
+</div>
+
+
+
+</div>

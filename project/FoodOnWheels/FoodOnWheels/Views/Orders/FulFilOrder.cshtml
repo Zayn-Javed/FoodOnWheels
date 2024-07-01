@@ -1,0 +1,46 @@
+﻿@model IEnumerable<FoodOnWheels.Models.Order>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Select Food Order which are ready to FulFil</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.foodItem.ItemName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.foodItem.ItemName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                <a class="btn btn-success" role="button"  asp-action="FilOrder" asp-route-id="@item.OrderId">FulFil</a> 
+                
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<br/>
+ <a class="btn btn-info" role="button" asp-controller="Manager" asp-action="ManagerMenu" >Back to Menu</a> 

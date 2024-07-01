@@ -1,0 +1,54 @@
+﻿@model FoodOnWheels.Models.Manager
+
+@{
+     ViewData["Title"] = "Create";
+    Layout= "../Shared/UserLayout.cshtml";
+}
+
+
+        <form  asp-action= "Create" >
+            <br/>
+            <h3 class= "">Manager</h3>
+            <h4 class= "text-center align-content-center align-self-md-center">Create a new account.</h4>
+            <hr />
+            <div class="form-floating">
+                <input asp-for="Name" class="form-control" />
+                <label asp-for="Name"></label>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="RestaurantName" class="form-control" />
+                <label asp-for="RestaurantName"></label>
+                <span asp-validation-for="RestaurantName" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="RestaurantLocation" class="form-control" />
+                <label asp-for="RestaurantLocation"></label>
+                <span asp-validation-for="RestaurantLocation" class="text-danger"></span>
+            </div>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-floating">
+                <input asp-for="UserName" class="form-control" />
+                <label asp-for="UserName"></label>
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input type="password" asp-for="Password" class="form-control" />
+                <label asp-for="Password"></label>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            
+            <br/>
+            <div class="form-group">
+                <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">sign up</button>
+            </div>
+        </form>
+
+
+
+
+        @section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+   
+

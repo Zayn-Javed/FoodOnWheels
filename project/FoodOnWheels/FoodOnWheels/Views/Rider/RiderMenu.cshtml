@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "RiderMenu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Rider Menu</h1>
+ <br/>
+<div>
+
+
+<div class="card text-center text-white bg-primary mb-3 ">
+  <div class="card-header">
+    FoodOnWheels
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Pick Order</h5>
+    <p class="card-text">Pick the Food Order which is most suitable to you now</p>
+    <a class="btn btn-light" asp-area="" asp-controller="Orders" asp-action="DeliverOrder">Pick Now</a>
+  </div>
+  <div class="card-footer text-muted">
+      <br/>
+  </div>
+</div>
+<br/>
+<div class="card text-center text-white bg-success mb-3 ">
+  <div class="card-header">
+    FoodOnWheels
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Deliver Order</h5>
+    <p class="card-text">Update the status of the Food Order which has been deliverd to Customer</p>
+    <a class="btn btn-light" asp-area="" asp-controller="Orders" asp-action="DeliveredOrder">Deliver Now</a>
+  </div>
+  <div class="card-footer text-muted">
+      <br/>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>

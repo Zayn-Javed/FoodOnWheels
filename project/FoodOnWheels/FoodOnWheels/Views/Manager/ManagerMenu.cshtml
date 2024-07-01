@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewData["Title"] = "ManagerMenu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Manager Menu</h1>
+
+<div>
+
+
+<div  class="card text-white bg-info mb-3 align-content-center align-self-md-center"  >
+  <h5 class="card-header">Sub-Menu</h5>
+  <div class="card-body">
+    <h5 class="card-title">Manage Sub-Menus</h5>
+    <p class="card-text">Add/ Delete/ Edit Sub-Menus</p>
+    <a class="btn btn-light" asp-area="" asp-controller="SubMenus" asp-action="Index">Manage Now</a>
+  </div>
+</div>
+<br/>
+<div class="card text-white bg-info mb-3 align-content-center align-self-md-center">
+  <h5 class="card-header">Food</h5>
+  <div class="card-body">
+    <h5 class="card-title">Manage Foods</h5>
+    <p class="card-text">Add/ Delete/ Edit Food in any Sub-Menu</p>
+    <a class="btn btn-light" asp-area="" asp-controller="SubMenus" asp-action="AddFoodIndex">Manage Now</a>
+  </div>
+</div>
+<br/>
+<div  class="card text-white bg-success mb-3 align-content-center align-self-md-center" >
+  <h5 class="card-header">Orders</h5>
+  <div class="card-body">
+    <h5 class="card-title">FulFill Order</h5>
+    <p class="card-text">List of order placed by customer and yet to be fulfilled</p>
+    <a class="btn btn-light" asp-area="" asp-controller="Orders" asp-action="FulFilOrder">Fulfil Now</a>
+  </div>
+</div>
+<br/>
+<div  class="card text-white bg-primary mb-3 align-content-center align-self-md-center" >
+  <h5 class="card-header">Reviews</h5>
+  <div class="card-body">
+    <h5 class="card-title">Check Reviews</h5>
+    <p class="card-text">List of Reviews placed by Customers for your Restaurant</p>
+    <a class="btn btn-light" asp-area="" asp-controller="Review" asp-action="ShowReview">Check Review Now</a>
+  </div>
+</div>
+
+
+
+
+</div>

@@ -1,0 +1,40 @@
+﻿@model FoodOnWheels.Models.Order
+
+@{
+    ViewData["Title"] = "FilOrder";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>FilOrder</h1>
+
+<h3>Are you sure you want to Fulful this?</h3>
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.foodItem.ItemName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.foodItem.ItemName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+                <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+    </dl>
+    
+    <form asp-action="FilOrder">
+        <input type="hidden" asp-for="OrderId" />
+        <input type="submit" value="FulFil" class="btn btn-success" /> 
+        <a asp-action="FulFilOrder" class="btn btn-info">Back to Order List</a>
+    </form>
+</div>
